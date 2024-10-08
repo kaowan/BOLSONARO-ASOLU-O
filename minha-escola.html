@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos - Times de Futebol</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico dos Melhores Times Mundiais</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Melhores Times de Futebol do Mundo</h2>
+<canvas id="meuGrafico"></canvas>
+
+<script>
+    const ctx = document.getElementById('meuGrafico').getContext('2d');
+    const meuGrafico = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Real Madrid', 'Barcelona', 'Bayern de Munique', 'Manchester City', 'Liverpool'],
+            datasets: [{
+                label: 'Pontuação',
+                data: [10, 9, 8, 9, 8], // Exemplo de pontuação
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+    <header>
+        <h1>Relatório das redes sociais</h1>
+        <nav>
+            <a href="index.html">Mundial</a>
+            <a href="minha-escola.html">Brasileiro</a>
+        </nav>
+    </header>
+    <main class="graficos-section">
+        <section id="graficos-container" class="graficos-container">
+            <!-- crie os gráficos/texto aqui -->
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Kaowan Hideki</p>
+    </footer>
+    <script type="module" src="graficos/common.js"></script>
+    <script type="module" src="graficos/redesSociaisMinhaEscola.js"></script>
+</body>
+</html>
